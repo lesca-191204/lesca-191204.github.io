@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Mod Prototypes — Santiago Lescano</title>
+  <meta name="description" content="Advanced gameplay prototypes for ARK: Survival Evolved (UE4): a replicated space-trade system with a boardable ship, real-time snowfall with dynamic materials and a physics-based meteor system.">
+  <meta property="og:image" content="../assets/img/lcf-cover.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="logo-mark">L</span>Lescano</a>
+    <div class="nav-links">
+      <a href="../index.html#work"><span lang="en">Work</span><span lang="es">Proyectos</span></a>
+      <a href="../index.html#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+      <button class="lang-toggle" type="button" aria-label="Change language"><span lang="en"><b>EN</b> / ES</span><span lang="es">EN / <b>ES</b></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="hero-bg"><img src="../assets/img/lcf-cover.jpg" alt=""></div>
+  <div class="wrap">
+    <a class="back" href="../index.html#work">← <span lang="en">All projects</span><span lang="es">Todos los proyectos</span></a><br>
+    <span class="eyebrow"><span lang="en">Gameplay programming · ARK: Survival Evolved</span><span lang="es">Programación de gameplay · ARK: Survival Evolved</span></span>
+    <h1><span lang="en">Advanced mod<br>prototypes</span><span lang="es">Prototipos<br>avanzados</span></h1>
+    <p class="lead">
+      <span lang="en">A set of advanced gameplay systems built in ARK's UE4 dev kit: a replicated space-trade economy with a boardable ship, real-time snowfall and physics-driven meteor showers.</span>
+      <span lang="es">Un conjunto de sistemas de gameplay avanzados hechos en el dev kit de ARK (UE4): una economía de comercio espacial replicada con una nave abordable, nevadas en tiempo real y lluvias de meteoritos con física.</span>
+    </p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="meta">
+    <div><span lang="en">Role</span><span lang="es">Rol</span><b lang="en">Solo developer</b><b lang="es">Desarrollador (solo)</b></div>
+    <div><span lang="en">Engine</span><span lang="es">Motor</span><b>ARK Dev Kit · UE4</b></div>
+    <div><span lang="en">Date</span><span lang="es">Fecha</span><b lang="en">June 2026</b><b lang="es">Junio 2026</b></div>
+    <div><span lang="en">Status</span><span lang="es">Estado</span><b lang="en">Prototypes</b><b lang="es">Prototipos</b></div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>01</small><span lang="en">Overview</span><span lang="es">Resumen</span></h2>
+    <div class="prose">
+      <p lang="en">These are some of my most recent and technically ambitious systems: prototypes that push ARK's dev kit beyond what the base game offers, all <strong>designed and programmed by me</strong>.</p>
+      <p lang="es">Son algunos de mis sistemas más recientes y ambiciosos técnicamente: prototipos que llevan el dev kit de ARK más allá de lo que ofrece el juego base, todos <strong>diseñados y programados por mí</strong>.</p>
+      <p lang="en">The centerpiece is a <strong>space-trade system</strong>: a ship that arrives on the map, which players can board to buy items and creatures from self-restocking markets with their own currency. Alongside it, two world systems: <strong>real-time snow accumulation</strong> and <strong>meteor showers</strong> that deal real damage.</p>
+      <p lang="es">La pieza central es un <strong>sistema de comercio espacial</strong>: una nave que llega al mapa y que los jugadores pueden abordar para comprar ítems y criaturas en mercados que se renuevan solos y tienen moneda propia. A su lado, dos sistemas del mundo: <strong>acumulación de nieve en tiempo real</strong> y <strong>lluvias de meteoritos</strong> que hacen daño real.</p>
+      <div class="callout">
+        <b lang="en">Work in progress</b><b lang="es">En desarrollo</b>
+        <span lang="en">Videos show prototype builds with debug info on screen.</span>
+        <span lang="es">Los videos muestran versiones de prototipo con información de depuración en pantalla.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-section reveal">
+    <div class="systems">
+      <div class="system">
+        <div class="system-media"><video src="../assets/video/lcf-ship.mp4" poster="../assets/img/lcf-ship.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div>
+          <span class="num">01 · <span lang="en">Space trade</span><span lang="es">Comercio espacial</span></span>
+          <h3>Ship Market</h3>
+          <p lang="en">The whole trade system combined: a ship arrives at a sector of the map and players can board it to trade inside. It has its own UI showing where each shop is, a departure timer, automatic teleport and a level designed specifically for it.</p>
+          <p lang="es">Todo el sistema de comercio junto: una nave llega a un sector del mapa y los jugadores pueden abordarla para comerciar adentro. Tiene su propia interfaz que indica dónde está cada tienda, temporizador de partida, teletransporte automático y un nivel diseñado especialmente.</p>
+          <div class="tags"><span class="tag">Level design</span><span class="tag">UI</span><span class="tag">Replication</span><span class="tag">Events</span></div>
+          <a class="watch" href="https://youtu.be/5gOpeth0d5E" target="_blank" rel="noopener"><span lang="en">Watch full video</span><span lang="es">Ver video completo</span> →</a>
+        </div>
+      </div>
+
+      <div class="system">
+        <div class="system-media"><video src="../assets/video/lcf-items.mp4" poster="../assets/img/lcf-items.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div>
+          <span class="num">02 · <span lang="en">Space trade</span><span lang="es">Comercio espacial</span></span>
+          <h3>Item Market</h3>
+          <p lang="en">A much improved version of the Arkadox Z shop: stock rotates by itself every 24 hours, a virtual currency is tied to each character, and polished widgets let players buy in bulk — all with solid replication.</p>
+          <p lang="es">Una versión muy mejorada de la tienda de Arkadox Z: el stock rota solo cada 24 horas, hay una moneda virtual ligada a cada personaje y widgets pulidos para comprar en cantidad, todo con una replicación sólida.</p>
+          <div class="tags"><span class="tag">Economy</span><span class="tag">UMG</span><span class="tag">Replication</span></div>
+          <a class="watch" href="https://youtu.be/rAcHFHcn0Dg" target="_blank" rel="noopener"><span lang="en">Watch full video</span><span lang="es">Ver video completo</span> →</a>
+        </div>
+      </div>
+
+      <div class="system">
+        <div class="system-media"><video src="../assets/video/lcf-dinos.mp4" poster="../assets/img/lcf-dinos.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div>
+          <span class="num">03 · <span lang="en">Space trade</span><span lang="es">Comercio espacial</span></span>
+          <h3>Dino Market</h3>
+          <p lang="en">A creature shop where players browse holograms of each creature one by one before buying it. The offers renew automatically every 24 hours.</p>
+          <p lang="es">Una tienda de criaturas donde los jugadores recorren hologramas de cada criatura, una por una, antes de comprarla. Las ofertas se renuevan solas cada 24 horas.</p>
+          <div class="tags"><span class="tag">Holograms</span><span class="tag">Economy</span><span class="tag">UI</span></div>
+          <a class="watch" href="https://youtu.be/h6DixbuiDi0" target="_blank" rel="noopener"><span lang="en">Watch full video</span><span lang="es">Ver video completo</span> →</a>
+        </div>
+      </div>
+
+      <div class="system">
+        <div class="system-media"><video src="../assets/video/lcf-snow.mp4" poster="../assets/img/lcf-snow.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div>
+          <span class="num">04 · <span lang="en">World</span><span lang="es">Mundo</span></span>
+          <h3>Snow System</h3>
+          <p lang="en">Real-time snowfall in ARK's UE4 dev kit, something very rarely achieved: terrain and foliage gradually turn white as it snows. It relies on custom dynamic materials that ARK doesn't have, which I built and improved myself.</p>
+          <p lang="es">Nevadas en tiempo real en el dev kit de ARK (UE4), algo que muy pocas veces se logró: el terreno y la vegetación se van cubriendo de blanco mientras nieva. Usa materiales dinámicos propios que ARK no tiene y que hice y mejoré yo.</p>
+          <div class="tags"><span class="tag">Dynamic materials</span><span class="tag">Weather</span><span class="tag">Shaders</span></div>
+          <a class="watch" href="https://youtu.be/9Cb6Ul2D7Kg" target="_blank" rel="noopener"><span lang="en">Watch full video</span><span lang="es">Ver video completo</span> →</a>
+        </div>
+      </div>
+
+      <div class="system">
+        <div class="system-media"><video src="../assets/video/lcf-meteors.mp4" poster="../assets/img/lcf-meteors.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div>
+          <span class="num">05 · <span lang="en">World</span><span lang="es">Mundo</span></span>
+          <h3>Meteor System</h3>
+          <p lang="en">Meteor showers that hit random regions of the map and deal real damage. Each meteor is a projectile with a calculated, realistic trajectory.</p>
+          <p lang="es">Lluvias de meteoritos que caen en regiones al azar del mapa y hacen daño real. Cada meteorito es un proyectil con una trayectoria calculada y realista.</p>
+          <div class="tags"><span class="tag">Projectiles</span><span class="tag">Physics</span><span class="tag">Events</span></div>
+          <a class="watch" href="https://youtu.be/guxsO79T_Nk" target="_blank" rel="noopener"><span lang="en">Watch full video</span><span lang="es">Ver video completo</span> →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>02</small><span lang="en">Full videos</span><span lang="es">Videos completos</span></h2>
+    <div class="videos">
+      <div class="video"><div class="yt" data-id="5gOpeth0d5E"></div><div class="cap"><b>Ship Market</b><span lang="en">Boarding the trade ship</span><span lang="es">Abordando la nave de comercio</span></div></div>
+      <div class="video"><div class="yt" data-id="9Cb6Ul2D7Kg"></div><div class="cap"><b>Snow System</b><span lang="en">Real-time snow accumulation</span><span lang="es">Acumulación de nieve en tiempo real</span></div></div>
+      <div class="video"><div class="yt" data-id="rAcHFHcn0Dg"></div><div class="cap"><b>Item Market</b><span lang="en">Bulk buying and 24 h rotation</span><span lang="es">Compra en cantidad y rotación cada 24 h</span></div></div>
+      <div class="video"><div class="yt" data-id="h6DixbuiDi0"></div><div class="cap"><b>Dino Market</b><span lang="en">Creature holograms</span><span lang="es">Hologramas de criaturas</span></div></div>
+      <div class="video"><div class="yt" data-id="guxsO79T_Nk"></div><div class="cap"><b>Meteor System</b><span lang="en">Physics-based meteor showers</span><span lang="es">Lluvias de meteoritos con física</span></div></div>
+    </div>
+    <p class="disclaimer" style="grid-column: 2">
+      <span lang="en">Made with the official ARK Dev Kit (UE4). ARK: Survival Evolved is a trademark of Studio Wildcard.</span>
+      <span lang="es">Hecho con el ARK Dev Kit oficial (UE4). ARK: Survival Evolved es una marca de Studio Wildcard.</span>
+    </p>
+  </div>
+
+  <div class="next">
+    <a href="arkadox-z.html">
+      <div><span lang="en">Next project</span><span lang="es">Siguiente proyecto</span><b>Arkadox Z</b></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><span>© 2026 Santiago Lescano</span><span>Technical Designer · Unreal Engine 5</span></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
