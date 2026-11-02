@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Killzone Shadow Fall PC Port — Santiago Lescano</title>
+  <meta name="description" content="Fan-made native Windows port of Killzone Shadow Fall: reverse engineering, runtime hooks, Vulkan, DLSS/FSR, ultrawide and private multiplayer.">
+  <meta property="og:image" content="../assets/img/kz-cover.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="logo-mark">L</span>Lescano</a>
+    <div class="nav-links">
+      <a href="../index.html#work"><span lang="en">Work</span><span lang="es">Proyectos</span></a>
+      <a href="../index.html#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+      <button class="lang-toggle" type="button" aria-label="Change language"><span lang="en"><b>EN</b> / ES</span><span lang="es">EN / <b>ES</b></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="hero-bg"><img src="../assets/img/kz-cover.jpg" alt=""></div>
+  <div class="wrap">
+    <a class="back" href="../index.html#work">← <span lang="en">All projects</span><span lang="es">Todos los proyectos</span></a><br>
+    <span class="eyebrow"><span lang="en">Engineering · Open source</span><span lang="es">Ingeniería · Código abierto</span></span>
+    <h1>Killzone<br>Shadow Fall <span lang="en">PC</span><span lang="es">PC</span></h1>
+    <p class="lead">
+      <span lang="en">A fan-made native Windows port of a PS4 exclusive. The game's own code runs directly on the PC's CPU, and its graphics are translated to Vulkan in real time.</span>
+      <span lang="es">Un port nativo para Windows, hecho por fans, de un exclusivo de PS4. El código del juego corre directamente en el procesador de la PC y sus gráficos se traducen a Vulkan en tiempo real.</span>
+    </p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="meta">
+    <div><span lang="en">Role</span><span lang="es">Rol</span><b lang="en">Project lead &amp; developer</b><b lang="es">Líder y desarrollador</b></div>
+    <div><span lang="en">Stack</span><span lang="es">Tecnologías</span><b>C / C++ · Vulkan · Python</b></div>
+    <div><span lang="en">Status</span><span lang="es">Estado</span><b lang="en">Public beta · v0.8.1</b><b lang="es">Beta pública · v0.8.1</b></div>
+    <div><span lang="en">Started</span><span lang="es">Inicio</span><b lang="en">October 2026</b><b lang="es">Octubre 2026</b></div>
+  </div>
+
+  <div class="p-section reveal">
+    <div class="numbers">
+      <div><b>24K+</b><span lang="en">Downloads across releases</span><span lang="es">Descargas entre todas las versiones</span></div>
+      <div><b>333</b><span lang="en">Stars on GitHub</span><span lang="es">Estrellas en GitHub</span></div>
+      <div><b>14</b><span lang="en">Releases in under 3 weeks</span><span lang="es">Versiones en menos de 3 semanas</span></div>
+      <div><b>230+</b><span lang="en">Community members on Discord</span><span lang="es">Miembros en la comunidad de Discord</span></div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>01</small><span lang="en">Overview</span><span lang="es">Resumen</span></h2>
+    <div class="prose">
+      <p lang="en">Killzone Shadow Fall was a PlayStation 4 exclusive with no PC version. This project makes it run <strong>natively on Windows</strong> from the player's own copy of the game: a loader runs the original game code on the CPU, a runtime reimplements the console's system libraries, and a graphics layer translates the PS4's GPU commands to <strong>Vulkan</strong>.</p>
+      <p lang="es">Killzone Shadow Fall fue un exclusivo de PlayStation 4 sin versión de PC. Este proyecto lo hace correr <strong>de forma nativa en Windows</strong> a partir de la copia del propio jugador: un cargador ejecuta el código original del juego en el procesador, un runtime reimplementa las librerías de sistema de la consola y una capa gráfica traduce los comandos de la GPU de PS4 a <strong>Vulkan</strong>.</p>
+      <p lang="en">It is built on an open-source PS4-to-PC porting framework (the same family as other community ports). On top of it, I lead everything specific to this game: <strong>reverse engineering the game's executable</strong>, writing the hooks and patches that make it work and feel like a PC game, the launcher, releases and the community.</p>
+      <p lang="es">Está construido sobre un framework de código abierto para portar juegos de PS4 a PC (la misma familia que otros ports de la comunidad). Encima de eso lidero todo lo propio de este juego: <strong>la ingeniería inversa del ejecutable</strong>, los hooks y parches que lo hacen funcionar y sentirse como un juego de PC, el launcher, las versiones y la comunidad.</p>
+      <div class="callout">
+        <b lang="en">Result</b><b lang="es">Resultado</b>
+        <span lang="en">The whole campaign is playable from start to finish, with features the original never had: upscalers, frame generation, ultrawide, high FOV and a private multiplayer mode.</span>
+        <span lang="es">La campaña entera se puede jugar de principio a fin, con funciones que el original nunca tuvo: escaladores, generación de frames, ultrawide, FOV alto y un modo multijugador privado.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>02</small><span lang="en">What I built</span><span lang="es">Qué hice</span></h2>
+    <div class="features">
+      <div class="feature"><h4><i>A</i><span lang="en">Reverse engineering &amp; hooks</span><span lang="es">Ingeniería inversa y hooks</span></h4>
+        <p lang="en">Located engine functions in the compiled game with Ghidra and patched them at runtime: raw mouse look, FOV up to 200, camera shake, post-processing toggles, LOD distance.</p>
+        <p lang="es">Ubiqué funciones del motor en el juego compilado con Ghidra y las modifiqué en tiempo de ejecución: mouse directo, FOV hasta 200, sacudida de cámara, efectos de postprocesado, distancia de LOD.</p></div>
+      <div class="feature"><h4><i>B</i><span lang="en">Modern rendering</span><span lang="es">Renderizado moderno</span></h4>
+        <p lang="en">NVIDIA DLSS and frame generation, AMD FSR 3.1 and FSR 4, live-switchable quality modes by resizing the engine's scene buffers, and ultrawide 21:9 / 32:9 with the HUD kept in place.</p>
+        <p lang="es">NVIDIA DLSS y generación de frames, AMD FSR 3.1 y FSR 4, modos de calidad que cambian en vivo redimensionando los buffers de escena del motor, y ultrawide 21:9 / 32:9 con el HUD en su lugar.</p></div>
+      <div class="feature"><h4><i>C</i><span lang="en">Private multiplayer (beta)</span><span lang="es">Multijugador privado (beta)</span></h4>
+        <p lang="en">Integrated a community prototype into the port: native networking in the runtime plus a small server that stands in for the retired online services, so friends can play over a VPN.</p>
+        <p lang="es">Integré un prototipo de la comunidad en el port: red nativa en el runtime y un servidor chico que reemplaza los servicios online ya cerrados, para jugar con amigos por VPN.</p></div>
+      <div class="feature"><h4><i>D</i><span lang="en">Performance &amp; stability</span><span lang="es">Rendimiento y estabilidad</span></h4>
+        <p lang="en">Shader-cache fixes, a merged community contribution that raised draw throughput by 38%, CPU instruction emulation for older processors and fixes for dozens of reported crashes.</p>
+        <p lang="es">Arreglos en la caché de shaders, una contribución de la comunidad integrada que subió el rendimiento de dibujado un 38%, emulación de instrucciones para procesadores viejos y arreglos para decenas de cierres reportados.</p></div>
+      <div class="feature"><h4><i>E</i><span lang="en">PC-native experience</span><span lang="es">Experiencia de PC</span></h4>
+        <p lang="en">In-game settings menu, full key remapping, keyboard mapping for the touchpad-driven drone, Xbox and PlayStation button prompts drawn in code, cheats and a free camera.</p>
+        <p lang="es">Menú de opciones dentro del juego, teclas configurables, control por teclado del dron que usaba el touchpad, íconos de botones de Xbox y PlayStation dibujados por código, trucos y cámara libre.</p></div>
+      <div class="feature"><h4><i>F</i><span lang="en">Launcher, releases &amp; community</span><span lang="es">Launcher, versiones y comunidad</span></h4>
+        <p lang="en">An HTML launcher with self-update, 14 releases with notes in two languages, GitHub issue triage and a 230-member Discord community.</p>
+        <p lang="es">Un launcher en HTML que se actualiza solo, 14 versiones con notas en dos idiomas, gestión de issues en GitHub y una comunidad de Discord de 230 miembros.</p></div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>03</small><span lang="en">How I work</span><span lang="es">Cómo trabajo</span></h2>
+    <div class="prose">
+      <p lang="en">Most fixes start as a player report. I reproduce the problem, find the responsible code in the game's executable with <strong>static analysis</strong> instead of trial and error, then write the smallest hook that fixes it and ship it in the next release.</p>
+      <p lang="es">La mayoría de los arreglos empiezan con un reporte de un jugador. Reproduzco el problema, encuentro el código responsable en el ejecutable del juego con <strong>análisis estático</strong> en lugar de prueba y error, escribo el hook más chico que lo arregle y lo publico en la siguiente versión.</p>
+    </div>
+  </div>
+
+  <div class="p-section reveal">
+    <div class="gallery">
+      <figure class="full"><img src="../assets/img/kz-forest.jpg" alt="Killzone Shadow Fall on PC" loading="lazy"><figcaption lang="en">Running natively on Windows</figcaption><figcaption lang="es">Corriendo de forma nativa en Windows</figcaption></figure>
+      <figure><img src="../assets/img/kz-fov100.jpg" alt="Field of view 100" loading="lazy"><figcaption lang="en">FOV 100 · DLSS · performance overlay</figcaption><figcaption lang="es">FOV 100 · DLSS · overlay de rendimiento</figcaption></figure>
+      <figure><img src="../assets/img/kz-fov150.jpg" alt="Field of view 150" loading="lazy"><figcaption lang="en">FOV 150 · patched at runtime</figcaption><figcaption lang="es">FOV 150 · modificado en tiempo de ejecución</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>04</small>Links</h2>
+    <div>
+      <div class="links">
+        <a class="btn btn-primary" href="https://github.com/lesca-191204/killzone-shadowfall-pc" target="_blank" rel="noopener"><span lang="en">Repository on GitHub</span><span lang="es">Repositorio en GitHub</span></a>
+        <a class="btn" href="https://github.com/lesca-191204/killzone-shadowfall-pc/releases" target="_blank" rel="noopener"><span lang="en">Releases</span><span lang="es">Versiones</span></a>
+      </div>
+      <p class="disclaimer">
+        <span lang="en">Non-commercial fan project. Not affiliated with Sony Interactive Entertainment or Guerrilla Games. No game files are distributed: players need their own copy. Killzone is a trademark of Sony Interactive Entertainment.</span>
+        <span lang="es">Proyecto de fans sin fines comerciales. Sin relación con Sony Interactive Entertainment ni Guerrilla Games. No se distribuyen archivos del juego: cada jugador necesita su propia copia. Killzone es una marca de Sony Interactive Entertainment.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="next">
+    <a href="turret-utilities.html">
+      <div><span lang="en">Next project</span><span lang="es">Siguiente proyecto</span><b>Turret Utilities</b></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><span>© 2026 Santiago Lescano</span><span>Technical Designer · Unreal Engine 5</span></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

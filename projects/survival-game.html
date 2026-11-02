@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survival Game (in development) — Santiago Lescano</title>
+  <meta name="description" content="An unannounced co-op survival game in Unreal Engine 5: networked ship physics, ocean simulation, synced weather, building and MetaHuman characters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="logo-mark">L</span>Lescano</a>
+    <div class="nav-links">
+      <a href="../index.html#work"><span lang="en">Work</span><span lang="es">Proyectos</span></a>
+      <a href="../index.html#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+      <button class="lang-toggle" type="button" aria-label="Change language"><span lang="en"><b>EN</b> / ES</span><span lang="es">EN / <b>ES</b></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="p-hero noimg">
+  <div class="wrap">
+    <a class="back" href="../index.html#work">← <span lang="en">All projects</span><span lang="es">Todos los proyectos</span></a><br>
+    <span class="eyebrow"><span class="status-dot"></span><span lang="en">In development · Unreal Engine 5</span><span lang="es">En desarrollo · Unreal Engine 5</span></span>
+    <h1><span lang="en">Survival<br>game</span><span lang="es">Juego de<br>supervivencia</span></h1>
+    <p class="lead">
+      <span lang="en">An unannounced survival game from my own indie studio, where the ocean and ships are the core of the experience. Built in Unreal Engine 5 with C++ and Blueprints.</span>
+      <span lang="es">Un juego de supervivencia todavía sin anunciar, de mi propio estudio independiente, donde el océano y los barcos son el centro de la experiencia. Hecho en Unreal Engine 5 con C++ y Blueprints.</span>
+    </p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="meta">
+    <div><span lang="en">Role</span><span lang="es">Rol</span><b lang="en">Studio founder · systems &amp; network</b><b lang="es">Fundador del estudio · sistemas y red</b></div>
+    <div><span lang="en">Genre</span><span lang="es">Género</span><b lang="en">Multiplayer survival</b><b lang="es">Supervivencia multijugador</b></div>
+    <div><span lang="en">Engine</span><span lang="es">Motor</span><b>Unreal Engine 5 · C++</b></div>
+    <div><span lang="en">Status</span><span lang="es">Estado</span><b lang="en">Pre-alpha</b><b lang="es">Pre-alfa</b></div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>01</small><span lang="en">Overview</span><span lang="es">Resumen</span></h2>
+    <div class="prose">
+      <p lang="en">A multiplayer survival game with a pirate-fantasy tone, in first and third person. It launches into Early Access as a <strong>co-op experience</strong> and is designed to grow into <strong>large-scale multiplayer</strong>. Players sail between large landmasses, so the sea is not a backdrop: it's where much of the game happens.</p>
+      <p lang="es">Un juego de supervivencia multijugador con un tono de fantasía pirata, en primera y tercera persona. Sale en Early Access como <strong>experiencia cooperativa</strong> y está pensado para crecer hacia un <strong>multijugador masivo</strong>. Los jugadores navegan entre grandes masas de tierra, así que el mar no es un fondo: es donde pasa gran parte del juego.</p>
+      <p lang="en">It's developed by the <strong>small indie studio I founded</strong>. I lead the <strong>gameplay systems and networking</strong>: everything is built to be server-authoritative and to hold up under real-world latency.</p>
+      <p lang="es">Lo desarrolla el <strong>pequeño estudio independiente que fundé</strong>. Yo lidero <strong>los sistemas de juego y la red</strong>: todo está hecho para que el servidor tenga la autoridad y aguante la latencia real.</p>
+      <div class="callout">
+        <b lang="en">More soon</b><b lang="es">Más próximamente</b>
+        <span lang="en">The game hasn't been announced yet. Images and video will be added here as development moves forward.</span>
+        <span lang="es">El juego todavía no fue anunciado. Las imágenes y los videos se van a sumar acá a medida que avance el desarrollo.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>02</small><span lang="en">Systems I'm building</span><span lang="es">Sistemas que estoy haciendo</span></h2>
+    <div class="features">
+      <div class="feature"><h4><i>A</i><span lang="en">Ocean &amp; ship physics</span><span lang="es">Física de océano y barcos</span></h4>
+        <p lang="en">Water physics programmed from scratch for sailing: waves, swell and wind. Ships use a networked kinematic model so crews stay in sync, with buoyancy simulation for smaller floating objects.</p>
+        <p lang="es">Física de agua programada desde cero para la navegación: olas, oleaje y viento. Los barcos usan un modelo kinemático en red para que la tripulación esté sincronizada, con simulación de flotación para objetos chicos.</p></div>
+      <div class="feature"><h4><i>B</i><span lang="en">Latency-proof sync</span><span lang="es">Sincronización a prueba de lag</span></h4>
+        <p lang="en">Waves run on a shared server clock, so every client sees the same sea. Ships and swimming were tested under 700 ms of simulated latency without desyncing.</p>
+        <p lang="es">Las olas corren sobre un reloj compartido del servidor, así todos los clientes ven el mismo mar. Los barcos y el nado se probaron con 700 ms de latencia simulada sin desincronizarse.</p></div>
+      <div class="feature"><h4><i>C</i><span lang="en">Swimming &amp; diving</span><span lang="es">Nado y buceo</span></h4>
+        <p lang="en">Custom swimming that follows the real wave surface, diving and an oxygen system.</p>
+        <p lang="es">Nado propio que sigue la superficie real de las olas, buceo y sistema de oxígeno.</p></div>
+      <div class="feature"><h4><i>D</i><span lang="en">Day-night &amp; weather</span><span lang="es">Día, noche y clima</span></h4>
+        <p lang="en">A global day cycle with rain, fog, storms and lightning. Only small time anchors are replicated and each client computes the rest, so weather costs almost no bandwidth.</p>
+        <p lang="es">Un ciclo de día global con lluvia, niebla, tormentas y rayos. Solo se replican pequeños puntos de referencia de tiempo y cada cliente calcula el resto, así el clima casi no consume red.</p></div>
+      <div class="feature"><h4><i>E</i><span lang="en">Creatures with their own AI</span><span lang="es">Criaturas con IA propia</span></h4>
+        <p lang="en">A large roster of creatures, each with AI built from scratch and daily routines that follow the day-night cycle.</p>
+        <p lang="es">Una gran variedad de criaturas, cada una con IA hecha desde cero y rutinas diarias que siguen el ciclo de día y noche.</p></div>
+      <div class="feature"><h4><i>F</i><span lang="en">Dynamic global materials</span><span lang="es">Materiales dinámicos globales</span></h4>
+        <p lang="en">The whole world reacts to the weather: everything gets wet in the rain, puddles form, drops run down surfaces, footprints stay in the sand and snow builds up.</p>
+        <p lang="es">Todo el mundo reacciona al clima: todo se moja con la lluvia, se forman charcos, caen gotas por las superficies, quedan las pisadas en la arena y se acumula la nieve.</p></div>
+      <div class="feature"><h4><i>G</i><span lang="en">MetaHuman characters</span><span lang="es">Personajes MetaHuman</span></h4>
+        <p lang="en">MetaHuman-based characters with real-time customization, optimized for a multiplayer game: modular parts, hair cards, LOD rules by quality setting, and performance measured with crowds of characters on the real map.</p>
+        <p lang="es">Personajes basados en MetaHuman con personalización en tiempo real, optimizados para un juego multijugador: piezas modulares, hair cards, reglas de LOD según la calidad y rendimiento medido con grupos de personajes en el mapa real.</p></div>
+      <div class="feature"><h4><i>H</i><span lang="en">Building &amp; survival core</span><span lang="es">Construcción y base de supervivencia</span></h4>
+        <p lang="en">Base building with snapping and structural stability, a replicated inventory, groups, and a persistent save system for the world and its players.</p>
+        <p lang="es">Construcción de bases con encastre y estabilidad estructural, inventario replicado, grupos y un sistema de guardado persistente del mundo y sus jugadores.</p></div>
+      <div class="feature"><h4><i>I</i><span lang="en">Open world</span><span lang="es">Mundo abierto</span></h4>
+        <p lang="en">A large World Partition map with continents, rivers, lakes and waterfalls, built to be explored by land and by sea.</p>
+        <p lang="es">Un mapa grande con World Partition, con continentes, ríos, lagos y cascadas, pensado para explorarse por tierra y por mar.</p></div>
+      <div class="feature"><h4><i>J</i><span lang="en">Tools</span><span lang="es">Herramientas</span></h4>
+        <p lang="en">In-game debug menus and internal tools that speed up testing and content work for the team.</p>
+        <p lang="es">Menús de depuración en el juego y herramientas internas que aceleran las pruebas y el trabajo de contenido del equipo.</p></div>
+    </div>
+  </div>
+
+  <div class="p-section p-cols reveal">
+    <h2><small>03</small>Stack</h2>
+    <div>
+      <div class="tags">
+        <span class="tag">Unreal Engine 5</span><span class="tag">C++</span><span class="tag">Blueprints</span><span class="tag">Replication</span><span class="tag">Water plugin</span><span class="tag">World Partition</span><span class="tag">MetaHuman</span><span class="tag">Niagara</span><span class="tag">Unity Version Control</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="next">
+    <a href="killzone-port.html">
+      <div><span lang="en">Next project</span><span lang="es">Siguiente proyecto</span><b>Killzone Shadow Fall <span lang="en">PC Port</span><span lang="es">para PC</span></b></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><span>© 2026 Santiago Lescano</span><span>Technical Designer · Unreal Engine 5</span></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
